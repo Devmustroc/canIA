@@ -67,7 +67,7 @@ const SidebarRoutes = () => {
                     onClick={onClick}
                 />
                 <SidebarItem
-                    href="mailto:support@codewithantonio.com"
+                    href="mailto:elmustapha.abourar@gmail.com"
                     icon={MessageCircleQuestion}
                     label="Get Help"
                 />
