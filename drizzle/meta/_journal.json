@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1721375957098,
+      "tag": "0000_moaning_ozymandias",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1721385079831,
+      "tag": "0001_loose_logan",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1721386841219,
+      "tag": "0002_green_moon_knight",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1721387112886,
+      "tag": "0003_puzzling_stark_industries",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1721419431618,
+      "tag": "0004_colossal_mystique",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1721578795782,
+      "tag": "0005_glamorous_mattie_franklin",
+      "breakpoints": true
+    }
+  ]
+}
