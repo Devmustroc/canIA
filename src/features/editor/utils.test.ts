@@ -47,10 +47,10 @@ describe("Editor Utility Functions", () => {
 
       await transformText(objects);
 
-      expect(objects[0].type).toBe("text");
-      expect(objects[1].type).toBe("rect");
-      expect(objects[2].objects[0].type).toBe("text");
-      expect(objects[2].objects[1].type).toBe("circle");
+      expect(objects[0]?.type).toBe("text");
+      expect(objects[1]?.type).toBe("rect");
+      expect(objects[2]?.objects?.[0]?.type).toBe("text");
+      expect(objects[2]?.objects?.[1]?.type).toBe("circle");
     });
 
     it("should handle null or undefined input gracefully", async () => {
