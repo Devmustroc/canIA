@@ -1,15 +1,15 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 import { clerkMiddleware } from "@clerk/hono";
-import images from "@/app/api/[[...route]]/images";
-import ai from "@/app/api/[[...route]]/ai";
-import agent from "@/app/api/[[...route]]/agent";
-import projects from "@/app/api/[[...route]]/projects";
-import subscriptions from "@/app/api/[[...route]]/subscriptions";
+import images from "./images";
+import ai from "./ai";
+import agent from "./agent";
+import projects from "./projects";
+import subscriptions from "./subscriptions";
 
 export const runtime = "nodejs";
 
-const app = new Hono().basePath("/api");
+export const app = new Hono().basePath("/api");
 
 app.use(
   "*",
