@@ -42,7 +42,7 @@ const RemoveBgSideBar = ({
         mutation.mutate({
             image: imageSrc
         }, {
-            onSuccess: ({data}) => {
+            onSuccess: ({data}: any) => {
                 editor?.addImage(data);
             }
         })

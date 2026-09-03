@@ -16,7 +16,7 @@ export const useCheckout =  () => {
 
             return await response.json();
         },
-        onSuccess: ( { data } ) => {
+        onSuccess: ( { data }: any ) => {
             window.location.href = data;
         },
         onError: () => {

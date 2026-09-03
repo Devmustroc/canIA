@@ -43,7 +43,7 @@ const ScaleSideBar = ({
         mutation.mutate({
             image: imageSrc
         }, {
-            onSuccess: ({data}) => {
+            onSuccess: ({data}: any) => {
                 editor?.addImage(data);
             }
         })

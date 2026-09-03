@@ -50,7 +50,7 @@ export const AiTextPopover = ({ editor }: AiTextPopoverProps) => {
         customPrompt: promptText,
       },
       {
-        onSuccess: (data) => {
+        onSuccess: (data: any) => {
           if (data.data && activeObject) {
             // @ts-ignore
             activeObject.set("text", data.data);
@@ -62,7 +62,7 @@ export const AiTextPopover = ({ editor }: AiTextPopoverProps) => {
             toast.error("Aucune réponse générée par l'IA.");
           }
         },
-        onError: (err) => {
+        onError: (err: any) => {
           toast.error(err.message || "Erreur lors de la génération IA.");
         },
       }

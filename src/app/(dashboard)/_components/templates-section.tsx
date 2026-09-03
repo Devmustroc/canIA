@@ -48,7 +48,7 @@ export const TemplatesSection = () => {
         height: template.height
       },
       {
-        onSuccess: ({ data }) => {
+        onSuccess: ({ data }: any) => {
           router.push(`/editor/${data.id}`);
         }
       }
@@ -111,7 +111,7 @@ export const TemplatesSection = () => {
 
       {/* Grid of Templates */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {data?.map((template, idx) => (
+        {data?.map((template: any, idx: number) => (
           <TemplateCard
             key={template.id}
             title={template.name}

@@ -42,13 +42,13 @@ const AiSideBar = ({
     mutation.mutate(
       { prompt: value, model: imageModelId },
       {
-        onSuccess: ({ data }) => {
+        onSuccess: ({ data }: any) => {
           if (data) {
             editor?.addImage(data);
             toast.success("Image générée et ajoutée au canvas !");
           }
         },
-        onError: (err) => {
+        onError: (err: any) => {
           toast.error(err.message || "Échec de la génération de l'image");
         },
       }

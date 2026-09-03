@@ -36,7 +36,7 @@ export const CustomSizeModal = ({ isOpen, onClose }: CustomSizeModalProps) => {
         height: Number(height) || 1080,
       },
       {
-        onSuccess: ({ data }) => {
+        onSuccess: ({ data }: any) => {
           onClose();
           router.push(`/editor/${data.id}`);
         },

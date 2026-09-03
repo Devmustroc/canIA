@@ -318,7 +318,7 @@ const AgentSideBar = ({
           setIsRunning(false);
           toast.success("Composition générée avec succès !");
         },
-        onError: (err) => {
+        onError: (err: any) => {
           toast.error(err.message || "Erreur lors de la conception du design");
         },
       }
@@ -339,7 +339,7 @@ const AgentSideBar = ({
         },
       },
       {
-        onSuccess: ({ data }) => {
+        onSuccess: ({ data }: any) => {
           setAuditData(data);
           toast.success(`Score de design : ${data.score}/100`);
         },

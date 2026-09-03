@@ -60,7 +60,7 @@ export const ProjectsSection = () => {
         height: 1080,
       },
       {
-        onSuccess: ({ data }) => {
+        onSuccess: ({ data }: any) => {
           router.push(`/editor/${data.id}`);
         },
       }

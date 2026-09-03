@@ -414,7 +414,7 @@ export const CanAiChat = ({ editor }: CanAiChatProps) => {
         apiKey: userApiKey || undefined,
       },
       {
-        onSuccess: async ({ data }) => {
+        onSuccess: async ({ data }: any) => {
           const assistantMessage: Message = {
             id: String(Date.now() + 1),
             role: 'assistant',
@@ -428,7 +428,7 @@ export const CanAiChat = ({ editor }: CanAiChatProps) => {
             toast.success('Design mis à jour par canAI Copilote !');
           }
         },
-        onError: (err) => {
+        onError: (err: any) => {
           toast.error(err.message || 'Erreur lors de la réponse du Co-Pilote');
         },
       }

@@ -35,7 +35,7 @@ const StickerImageSideBar = ({
         }
 
         mutation.mutate({ image: uploadedImage, prompt: value }, {
-            onSuccess: (res) => {
+            onSuccess: (res: any) => {
                 if ("data" in res && res.data) {
                     const data = res.data;
                     if (Array.isArray(data)) {

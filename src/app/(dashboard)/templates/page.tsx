@@ -65,7 +65,7 @@ export default function TemplatesPage() {
         height: template.height,
       },
       {
-        onSuccess: ({ data }) => {
+        onSuccess: ({ data }: any) => {
           router.push(`/editor/${data.id}`);
         },
       }
@@ -76,7 +76,7 @@ export default function TemplatesPage() {
   const filteredTemplates = useMemo(() => {
     if (!data) return [];
 
-    return data.filter((template) => {
+    return data.filter((template: any) => {
       // 1. Search Query
       if (searchQuery.trim()) {
         const query = searchQuery.toLowerCase();
@@ -218,7 +218,7 @@ export default function TemplatesPage() {
 
           {filteredTemplates.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {filteredTemplates.map((template) => (
+              {filteredTemplates.map((template: any) => (
                 <TemplateCard
                   key={template.id}
                   title={template.name}

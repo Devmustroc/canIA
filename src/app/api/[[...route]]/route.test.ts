@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { app } from "./route";
+import { app } from "./app";
 
 describe("Hono API Router Integration Tests", () => {
   it("should return 404 for non-existent API routes", async () => {
@@ -9,7 +9,7 @@ describe("Hono API Router Integration Tests", () => {
 
   it("should protect projects endpoints requiring authentication", async () => {
     const res = await app.request("/api/projects");
-    // Without authentication, it should respond with 401 Unauthorized
+    // Without authentication, it should respond with 401 Unauthorized or 400 Bad Request
     expect([400, 401, 500]).toContain(res.status);
   });
 
