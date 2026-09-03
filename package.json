@@ -7,6 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
+    "test:e2e": "playwright test",
     "validate": "tsc --noEmit && next lint && vitest run",
     "generate": "bunx drizzle-kit generate",
     "migrate": "bunx drizzle-kit migrate",
@@ -75,6 +76,7 @@
     "zustand": "^4.5.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@types/bcryptjs": "^2.4.6",
