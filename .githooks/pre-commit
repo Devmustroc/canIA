@@ -1,0 +1,17 @@
+#!/bin/sh
+# Git Pre-Commit Hook: Guard against huge commits (> 500 lines)
+
+MAX_LINES=500
+ADDED_LINES=$(git diff --cached --numstat | awk '{add+=$1} END {print add+0}')
+
+if [ "$ADDED_LINES" -gt "$MAX_LINES" ]; then
+    echo ""
+    echo "⚠️ [GIT COMMIT GUARD WARNING]"
+    echo "---------------------------------------------------------"
+    echo "Ce commit contient $ADDED_LINES lignes modifiées, ce qui dépasse la limite recommandée ($MAX_LINES lignes)."
+    echo "Veuillez découper vos modifications en plusieurs commits atomiques plus petits."
+    echo "---------------------------------------------------------"
+    echo ""
+fi
+
+exit 0
